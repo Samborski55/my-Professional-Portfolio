@@ -3,7 +3,7 @@
     --second-color: #0A1612;
     --third-color: #1a2930;
     --fourth-color: #f7ce3e;
-    --round-corners: 15px;
+    --round-corners: 10px;
 }
 
 * {
@@ -12,3 +12,107 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif ,Helvetica, Arial;
+}
+
+header {
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+section {
+    padding: 60px;
+}
+
+.hero {
+    background-image: url(Images/index-bg-final.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--fourth-color);
+}
+
+#intro-page {
+    background-image: url(Images/landing-bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+#intro-text {
+    font-size: 12px;
+    text-align: center;
+    color: var(--third-color);
+    margin: 20px 0 40px 0;
+    text-shadow: 0 0 10px rgba(26, 41, 48, .5);
+}
+
+#logo {
+    width: 75px;
+    height: 75px;
+}
+
+#intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro-content button{
+    background-color: var(--fourth-color);
+    color: var(--third-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 10px;
+    border-radius: var(--round-corners);
+    width: 75%;
+}
+
+#intro-content button:hover {
+    background-color: var(--first-color);
+}
+
+@media screen and (min-width: 574px) {
+    #logo {
+        height: 125px;
+        width: 125px;
+    }
+    
+    #intro-text {
+        font-size: 18px;
+    }
+
+    #intro-content button{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 979px) {
+    header {
+        padding: 3px 25px 0 25px;
+    }
+   
+    #logo {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #intro-text {
+        font-size: 26px;
+        margin: 0 0 40px 0;
+    }
+
+    #intro-content button{
+        font-size: 24px;
+    }
+
+}
