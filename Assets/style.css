@@ -1,8 +1,9 @@
 :root {
-    --first-color: #c5c1c0;
-    --second-color: #0A1612;
-    --third-color: #1a2930;
-    --fourth-color: #f7ce3e;
+    --first-color: #61892f;
+    --second-color: #86c232;
+    --third-color: #222629;
+    --fourth-color: #474b4f;
+    --fifth-color: #6b6e70;
     --round-corners: 10px;
 }
 
@@ -17,23 +18,190 @@ body {
 }
 
 header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.2;
+    color: var(--third-color);
+    background-color: var(--first-color);
+}
+
+header a {
+    color: var(--third-color);
+    text-decoration: none;
+}
+
+header h1 {
+    font-weight: 800;
+    font-size: 7vw;
+    font-style: normal;
+    text-align: center;
+    width: 95%;
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8)
+}
+
+header h2 {
+    font-weight: 500;
+    font-size: 5vw;
+    font-style: normal;
+    text-align: center;
+    width: 95%;
+    padding-top: 5px;
+    text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8)
+}
+
+header nav{
+    margin: 5px 0;
+    width: 95%;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-weight: 100;
+    font-size: 2.8vw;
+    box-shadow: inset 0 0 0 0 var(--third-color);
+    text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8);
+    transition: color .1s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: var(--second-color);
+    border-radius: 10px;
+    text-shadow: none;
+    box-shadow: inset 350px 0 0 0 var(--third-color);
+}
+
+footer {
+    background-color: var(--second-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 5px;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer h2 {
+    text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8);
+    color: var(--third-color);
+    font-size: 5.5vw;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: var(--fourth-color);
+}
+
+footer nav div {
+    padding: 2px;
+} 
+
+footer nav div a {
+    padding: 2px;
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+
+footer nav a {
+    padding: 2px;
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+
+footer nav div a:hover {
+    color: rgb(3, 53, 16);
+}
+
+footer nav a:hover {
+    color: rgb(3, 53, 16);
+}
+
+.hero {
+    background-image: url("./Images/index-bg-final.png");
+    background-size: 100%;
+    background-attachment: local;
+    color: var(--first-color);
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 250px;
+    position: relative;
+    padding: 10px;
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+    font-variant: small-caps;
+}
+
+.hero div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    flex-flow: column;
+}
+
+.hero div p {
+    font-size: 8.5vw;
+    text-align: center;
+  }
+
+.hero div ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    flex-flow: column;
+}
+
+.hero div ul li {
+    list-style-type: none;
+    padding: 20px;
+    font-weight: 350;
+    font-size: 5.5vw;
+    line-height: .8;
+}
+
+#about-me {
+    background-color: var(--second-color);
+}
+
+#about-me h2 {
+    color: var(--third-color);
+    text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8);
+    text-align: center ;
+    font-size: 5.5vw;
+}
+
+#about-me p {
+    color: var(--fourth-color);
+    text-align: center;
+    font-size: 4vw;
+    padding: 15px 40px;
+}
+
+#intro-header {
     padding: 20px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-}
-
-section {
-    padding: 60px;
-}
-
-.hero {
-    background-image: url(Images/index-bg-final.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: var(--fourth-color);
+    background: none;
 }
 
 #intro-page {
@@ -48,12 +216,61 @@ section {
     align-items: center;
 }
 
+#deployed-projects {
+    background-color: var(--first-color);
+    text-align: center;
+    color: var(--third-color);
+}
+
+#deployed-projects h2 {
+  text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8);
+  font-size: 5.5vw;
+}
+
+#deployed-projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+#deployed-projects ul li {
+    border: 3px var(--third-color) solid;
+    margin: 10px;
+    color: var(--fourth-color);
+}
+
+#deployed-projects ul li a {
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+
+
+#deployed-projects ul li img {
+    height: 200px;
+    width: 300px;
+    margin: 5px 5px 5px 5px;
+}
+
+#deployed-projects ul li h3 {
+    margin: 5px;
+    text-decoration: underline;
+}
+
+#deployed-projects ul li p {
+    margin: 5px;
+}
 #intro-text {
     font-size: 12px;
     text-align: center;
     color: var(--third-color);
     margin: 20px 0 40px 0;
-    text-shadow: 0 0 10px rgba(26, 41, 48, .5);
+    text-shadow: 10px 5px 10px rgba(26, 41, 48, .6);
+}
+
+#deployed-projects ul li a img {
+    height: 250px;
+    width: 350px;
 }
 
 #logo {
@@ -68,20 +285,25 @@ section {
 }
 
 #intro-content button{
-    background-color: var(--fourth-color);
+    background-color: var(--second-color);
     color: var(--third-color);
     border: none;
     padding: 10px 20px;
     font-size: 10px;
     border-radius: var(--round-corners);
     width: 75%;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 #intro-content button:hover {
     background-color: var(--first-color);
 }
 
-@media screen and (min-width: 574px) {
+@media screen and (min-width: 564px) {
+    .hero {
+        height: 400px;
+    }
+
     #logo {
         height: 125px;
         width: 125px;
@@ -96,11 +318,23 @@ section {
     }
 }
 
-@media screen and (min-width: 979px) {
+@media screen and (min-width: 819px) {
     header {
         padding: 3px 25px 0 25px;
     }
    
+    .hero {
+        height: 550px;
+    }
+
+    .hero div ul li {
+        padding: 40px;
+    }
+
+    .hero div p {
+        padding: 30px;
+    }
+
     #logo {
         height: 200px;
         width: 200px;
@@ -116,3 +350,16 @@ section {
     }
 
 }
+
+@media screen and (min-width: 1250px) {
+    .hero {
+        height: 750px;
+    }
+
+    .hero div ul li {
+        padding: 55px;
+    }
+
+    .hero div p {
+        padding: 45px;
+    }
