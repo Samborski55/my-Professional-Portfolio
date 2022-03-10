@@ -29,12 +29,17 @@ header {
     background-color: var(--first-color);
 }
 
+header div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 header a {
     color: var(--third-color);
     text-decoration: none;
 }
 
-header h1 {
+header div h1 {
     font-weight: 800;
     font-size: 7vw;
     font-style: normal;
@@ -44,7 +49,7 @@ header h1 {
     text-shadow: 2px 2px 3px rgba(2, 63, 10, 0.8)
 }
 
-header h2 {
+header div h2 {
     font-weight: 500;
     font-size: 5vw;
     font-style: normal;
@@ -69,7 +74,6 @@ header nav ul {
 }
 
 header nav ul li a {
-    font-size: 16px;
     padding: 0 10px;
     border-radius: 10px;
     font-weight: 100;
@@ -105,9 +109,12 @@ footer h2 {
 footer nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px 0;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 25px 10px;
     color: var(--fourth-color);
+    font-size: 3.5vw;
 }
 
 footer nav div {
@@ -248,9 +255,16 @@ footer nav a:hover {
 
 #deployed-projects ul li img {
     height: 200px;
-    width: 300px;
-    margin: 5px 5px 5px 5px;
+    width: 180px;
+    margin: 5px;
 }
+
+#deployed-projects ul li a img {
+    height: 200px;
+    width: 360px;
+    margin: 5px;
+}
+
 
 #deployed-projects ul li h3 {
     margin: 5px;
@@ -266,11 +280,6 @@ footer nav a:hover {
     color: var(--third-color);
     margin: 20px 0 40px 0;
     text-shadow: 10px 5px 10px rgba(26, 41, 48, .6);
-}
-
-#deployed-projects ul li a img {
-    height: 250px;
-    width: 350px;
 }
 
 #logo {
@@ -300,6 +309,11 @@ footer nav a:hover {
 }
 
 @media screen and (min-width: 564px) {
+    
+    #deployed-projects ul {
+        justify-content: center;
+    }
+    
     .hero {
         height: 400px;
     }
@@ -322,7 +336,11 @@ footer nav a:hover {
     header {
         padding: 3px 25px 0 25px;
     }
-   
+    
+    #deployed-projects ul {
+        justify-content: center;
+    }
+
     .hero {
         height: 550px;
     }
@@ -351,7 +369,84 @@ footer nav a:hover {
 
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1065px) {
+
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    header div {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    header div h1 {
+        font-weight: 700;
+        font-size: 3.5vw;
+        text-align: left;
+        margin: 10px;
+    }
+
+    header div h2 {
+        font-weight: 500;
+        font-size: 3vw;
+        text-align: right;        
+        margin: 10px;
+    }
+
+    header nav ul li a {
+        padding: 10px;
+        font-weight: 100;
+        font-size: 2vw;
+    }
+
+    footer h2 {
+        font-size: 3vw;
+        padding: 10px;
+    }
+
+    footer nav {
+        font-size: 2.5vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: normal;
+        align-content: normal;
+        justify-content: space-between;
+    }
+
+    #about-me h2 {
+        font-size: 3.5vw;
+        padding: 10px;
+    }
+
+    #about-me p {
+        font-size: 2vw;
+        padding: 25px 40px;
+    }
+
+    #deployed-projects h2 {
+        font-size: 3.5vw;
+        padding: 10px;
+    }
+
+    #deployed-projects ul li img {
+        height: 300px;
+        width: 270px;
+        margin: 10px;
+    }
+    
+    #deployed-projects ul li a img {
+        height: 300px;
+        width: 540px;
+        margin: 10px;
+    }
+
+    #deployed-projects ul {
+        justify-content: center;
+    }
+
     .hero {
         height: 750px;
     }
